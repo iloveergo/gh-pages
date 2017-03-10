@@ -89,8 +89,10 @@
         </div>
         <div class="ui container basic segment text">
             <div class="ui right rail">
-                <div class="ui ad test wide skyscraper" style="width: 150px; height: 700px;">
-                    <img src="Dummy.jpg" alt="Dummy">
+                <div class="ui sticky">
+                    <div class="ui ad test wide skyscraper" style="width: 150px; height: 700px;">
+                        <img src="Dummy.jpg" alt="Dummy">
+                    </div>
                 </div>
             </div>
             <p>
@@ -195,6 +197,12 @@
                     $('.leaderboard img').attr("src", "Computer.gif");
                 }
             });
+
+            $('.ui.sticky')
+            .sticky({
+                offset: 120
+            })
+            ;
         </script>
     </body>
 </html>
