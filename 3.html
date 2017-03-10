@@ -89,8 +89,10 @@
         </div>
         <div class="ui container basic segment text">
             <div class="ui right rail">
-                <div class="ui ad test wide skyscraper" style="width: 150px; height: 700px;">
-                    <img src="Dummy.jpg" alt="Dummy">
+                <div class="ui sticky" style="z-index: -2;">
+                    <div class="ui ad test wide skyscraper" style="width: 150px; height: 700px;">
+                        <img src="Dummy.jpg" alt="Dummy">
+                    </div>
                 </div>
             </div>
            <p>MANILA, Philippines – Inflation rose in February due to a much heavier food basket, hitting a 27-month high, according to the National Economic and Development Authority (NEDA).</p>
@@ -120,6 +122,12 @@
                     $('.leaderboard img').attr("src", "Liquor.jpg");
                 }
             });
+
+            $('.ui.sticky')
+            .sticky({
+                offset: 120
+            })
+            ;
         </script>
     </body>
 </html>

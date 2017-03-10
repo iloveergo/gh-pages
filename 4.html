@@ -89,8 +89,10 @@
         </div>
         <div class="ui container basic segment text">
             <div class="ui right rail">
-                <div class="ui ad test wide skyscraper" style="width: 150px; height: 700px;">
-                    <img src="Dummy.jpg" alt="Dummy">
+                <div class="ui sticky" style="z-index: -2;">
+                    <div class="ui ad test wide skyscraper" style="width: 150px; height: 700px;">
+                        <img src="Dummy.jpg" alt="Dummy">
+                    </div>
                 </div>
             </div>
          <p>It’s hard to be inspired at work when you report to a boss you can’t respect. You still wonder to this day how she got this position, or how he’s been able to keep his oversized room despite his shortcomings.</p>
@@ -129,6 +131,12 @@
                     $('.leaderboard img').attr("src", "Shoes.gif");
                 }
             });
+
+            $('.ui.sticky')
+            .sticky({
+                offset: 120
+            })
+            ;
         </script>
     </body>
 </html>

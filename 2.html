@@ -89,8 +89,10 @@
         </div>
         <div class="ui container basic segment text">
             <div class="ui right rail">
-                <div class="ui ad test wide skyscraper" style="width: 150px; height: 700px;">
-                    <img src="Dummy.jpg" alt="Dummy">
+                <div class="ui sticky" style="z-index: -2;">
+                    <div class="ui ad test wide skyscraper" style="width: 150px; height: 700px;">
+                        <img src="Dummy.jpg" alt="Dummy">
+                    </div>
                 </div>
             </div>
             <p>WASHINGTON DC, USA – The Central Intelligence Agency on Wednesday, March 8, accused WikiLeaks of endangering Americans, helping US rivals and hampering Washington's fight against terror threats by releasing what the anti-secrecy site claimed was a trove of CIA hacking tools.</p>
@@ -136,6 +138,12 @@
                     $('.leaderboard img').attr("src", "Coffee.gif");
                 }
             });
+
+            $('.ui.sticky')
+            .sticky({
+                offset: 120
+            })
+            ;
         </script>
     </body>
 </html>
