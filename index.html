@@ -195,7 +195,13 @@
             $('#change-ad').visibility({
                 onTopVisible: function(){
                     $('.leaderboard img').attr("src", "Computer.gif");
-                }
+                    console.log('bottom');
+                },
+                onTopVisibleReverse: function(){
+                    $('.leaderboard img').attr("src", "Car.gif");
+                    console.log('reverse');
+                },
+                once: false,
             });
 
             $('.ui.sticky')

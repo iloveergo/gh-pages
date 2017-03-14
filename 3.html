@@ -120,7 +120,13 @@
             $('#change-ad').visibility({
                 onTopVisible: function(){
                     $('.leaderboard img').attr("src", "Liquor.jpg");
-                }
+                    console.log('bottom');
+                },
+                onTopVisibleReverse: function(){
+                    $('.leaderboard img').attr("src", "Plane.gif");
+                    console.log('reverse');
+                },
+                once: false,
             });
 
             $('.ui.sticky')

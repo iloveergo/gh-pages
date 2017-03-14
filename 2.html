@@ -136,7 +136,13 @@
             $('#change-ad').visibility({
                 onTopVisible: function(){
                     $('.leaderboard img').attr("src", "Coffee.gif");
-                }
+                    console.log('bottom');
+                },
+                onTopVisibleReverse: function(){
+                    $('.leaderboard img').attr("src", "Jewelry.jpg");
+                    console.log('reverse');
+                },
+                once: false,
             });
 
             $('.ui.sticky')
