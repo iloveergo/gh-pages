@@ -195,15 +195,16 @@
             $('#change-ad').visibility({
                 onTopVisible: function(){
                     $('.leaderboard img').attr("src", "Computer.gif");
-                    console.log('bottom');
                 },
                 onTopVisibleReverse: function(){
                     $('.leaderboard img').attr("src", "Car.gif");
-                    console.log('reverse');
                 },
                 once: false,
             });
 
+            $(window).on("load", function(){
+                console.log('images loaded');
+            });
             $('.ui.sticky')
             .sticky({
                 offset: 120
