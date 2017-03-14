@@ -114,9 +114,20 @@
                 <a href="4.html" style="color: #444; font-size: 20px;">Next Page ></a>
             </p>
         </div>
+        <div class="ui page dimmer">
+            <div class="content">
+                <div class="center">Loading...</div>
+            </div>
+        </div>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
         <script>
+            $('.page.dimmer').dimmer('show');
+
+            $(window).on("load", function(){
+                $('.page.dimmer').dimmer('hide');
+            });
+            
             $('#change-ad').visibility({
                 onTopVisible: function(){
                     $('.leaderboard img').attr("src", "Liquor.jpg");
