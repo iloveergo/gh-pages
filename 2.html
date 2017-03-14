@@ -138,6 +138,15 @@
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.9/semantic.min.js"></script>
         <script>
+            $.fn.preload = function() {
+                this.each(function(){
+                    $('<img/>')[0].src = this;
+                });
+            }
+
+            // Usage:
+
+            $(['Coffee.gif', 'Jewelry.jpg']).preload();
             $('.page.dimmer').dimmer('show');
 
             $(window).on("load", function(){
